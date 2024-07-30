@@ -7,9 +7,6 @@ fi
 
 ## Aliases ##
 
-## Cargo
-. "$HOME/.cargo/env"
-
 ## Synth Shell
 ##-----------------------------------------------------
 ## synth-shell-prompt.sh
