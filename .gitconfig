@@ -1,0 +1,14 @@
+[user]
+	email = aregevdev@gmail.com
+	name = AregevDev
+[init]
+	defaultBranch = main
+[color]
+	status = always
+[alias]
+	st = status
+	ll = log --oneline
+	aa = add .
+	cm = commit -m
+	p = push
+
