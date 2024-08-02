@@ -21,3 +21,4 @@ opt.autoindent = true
 -- Window splitting
 opt.splitright = true
 opt.splitbelow = true
+
