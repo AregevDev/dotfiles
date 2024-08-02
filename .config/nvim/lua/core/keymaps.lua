@@ -1,4 +1,4 @@
-local keymap = vim.keymap;
+local keymap = vim.keymap
 local telescope = require('telescope.builtin')
 
 -- Tabs
@@ -13,5 +13,4 @@ keymap.set('n', '<leader>fl', telescope.live_grep, {})
 
 -- which-key
 keymap.set('n', '<leader>w', '<cmd>WhichKey<CR>', {})
-
 
