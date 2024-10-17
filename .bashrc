@@ -1,33 +1,28 @@
-# .bashrc
+#
+# ~/.bashrc
+#
 
-## Global ##
-if [ -f /etc/bashrc ]; then
-    . /etc/bashrc
-fi
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
 
-## Aliases ##
+# evals
+eval "$(zoxide init bash)"
 
-## Synth Shell
-##-----------------------------------------------------
-## synth-shell-prompt.sh
-if [ -f ~/.config/synth-shell/synth-shell-prompt.sh ] && [ -n "$( echo $- | grep i )" ]; then
-	source ~/.config/synth-shell/synth-shell-prompt.sh
-fi
+# aliases
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+PS1='[\u@\h \W]\$ '
+. "$HOME/.cargo/env"
 
-##-----------------------------------------------------
-## better-ls
-if [ -f ~/.config/synth-shell/better-ls.sh ] && [ -n "$( echo $- | grep i )" ]; then
-	source ~/.config/synth-shell/better-ls.sh
-fi
+alias cd="z"
+alias ff="fastfetch"
+alias vim="nvim"
 
-##-----------------------------------------------------
-## alias
-if [ -f ~/.config/synth-shell/alias.sh ] && [ -n "$( echo $- | grep i )" ]; then
-	source ~/.config/synth-shell/alias.sh
-fi
+# dirs
+export VCPKG_DIR="~/Documents/vcpkg"
 
-##-----------------------------------------------------
-## better-history
-if [ -f ~/.config/synth-shell/better-history.sh ] && [ -n "$( echo $- | grep i )" ]; then
-	source ~/.config/synth-shell/better-history.sh
-fi
+# path
+export PATH="$PATH:$VCPKG_DIR"
+
+# starship
+eval "$(starship init bash)"
