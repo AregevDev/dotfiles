@@ -5,9 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# evals
-eval "$(zoxide init bash)"
-
 # aliases
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -20,9 +17,14 @@ alias vim="nvim"
 
 # dirs
 export VCPKG_DIR="~/Documents/vcpkg"
+export LOCAL_BIN_DIR="/home/oak/.local/bin"
 
 # path
 export PATH="$PATH:$VCPKG_DIR"
+export PATH="$PATH:$LOCAL_BIN_DIR"
 
 # starship
 eval "$(starship init bash)"
+
+# zoxide
+eval "$(zoxide init bash)"
